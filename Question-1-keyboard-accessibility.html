@@ -192,8 +192,13 @@ article p {
 .pull-right {
   float: right;
 }
+    a:focus,
+    button:focus {
+      outline: 3px solid #006b3a; /* Custom focus indicator */
+      background-color: rgba(0, 107, 58, 0.2); /* Optional background change */
+    }
 
-  </style>
+</style>
 </head>
 
 <body>
@@ -203,7 +208,7 @@ article p {
       <h1 class="logo">The Funion</h1>
       
       <!-- Maybe this could be improved with aria-activedescendant later? -->
-      <nav class="menu">
+      <nav class="menu" role="navigation" aria-label="Main Menu">
         <a href="#">Home</a>
         <a href="#">Politics</a>
         <a href="#">Business</a>
@@ -218,8 +223,7 @@ article p {
     <div class="container">
       <h3>Like the Funion? Consider joining our newsletter!</h3>
       <input type="text">
-      <button type="button" onclick="getFocus()">Sign up</button></div>
-      
+      <button type="button" onclick="getFocus()">Sign up</button>      
     </div>
   </div>
   <main class="container">
