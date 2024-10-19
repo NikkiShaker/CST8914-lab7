@@ -192,16 +192,23 @@ article p {
 .pull-right {
   float: right;
 }
-    a:focus,
-    button:focus {
-      outline: 3px solid #006b3a; /* Custom focus indicator */
-      background-color: rgba(0, 107, 58, 0.2); /* Optional background change */
-    }
+a:focus,
+button:focus {
+  outline: 3px solid #006b3a; /* Custom focus indicator */
+  background-color: rgba(0, 107, 58, 0.2); /* Optional background change */
+}
 
 </style>
 </head>
 
 <body>
+
+  <!-- Things I changed about the code:
+  1. Removed a section in css (main a) because it caused the focus outline to disapear
+  2. Added a focus outline for the button
+  3. Removed tabindex if the value was -1 or 1
+  4. Moved 'newsletter' div to the footer
+  5. Added a label to an input -->
   <header>
 
     <div class="container">
